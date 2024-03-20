@@ -37,7 +37,7 @@ html::-webkit-scrollbar-thumb{
 
 body{
     background:#111;
-    padding-left: 30%;
+    padding-left: 25%;
     display:flex;
 }
 
@@ -50,7 +50,7 @@ header{
     top:0; left:0;
     z-index:1000;
     height: 100%;
-    width:30%;
+    width:25%;
     background: #1a1a1a;
     display:flex;
     align-items:center;
@@ -478,15 +478,17 @@ section{
     margin-top: 1rem;
 }
 
+
+
 .testi {
     position:absolute;
     display: flex;
-    max-width: 100rem;
+    max-width: 70%;
     width: 100%;
     overflow: scroll;
     overflow-y: hidden;
-    align-items: left;
-    justify-content: left; 
+    align-items: center;
+    justify-content: center; 
     padding-left: 5%;
     padding-right: 5%;
 }
@@ -503,7 +505,6 @@ section{
   .testi::-webkit-scrollbar-track {
     background-color: #333; 
   }
-  
 
   .testi {
     scrollbar-width: thin;
@@ -554,3 +555,24 @@ section{
     font-size: 20px;
     color: var(--green);
   } */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  

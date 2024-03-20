@@ -21,18 +21,14 @@ $(document).ready(function(){
     // smooth scrolling 
   
     $('a[href*="#"]').on('click',function(e){
-  
       e.preventDefault();
-  
       $('html, body').animate({
-  
         scrollTop : $($(this).attr('href')).offset().top,
-  
       },
         500, 
         'linear'
       );
-  
+
     });
   
   });
@@ -56,7 +52,7 @@ $(document).ready(function(){
         if ($('#image').parent().is('.homeImage')) {
           // Move the image to the header with a smooth transition
           $('#image').appendTo('.headerImage').animate({
-            top: 5
+            top: 1
           }, 1000); // You can adjust the duration (in milliseconds) for a faster or slower transition
         }
       } else {
@@ -64,7 +60,7 @@ $(document).ready(function(){
         if ($('#image').parent().is('.headerImage')) {
           // Move the image back to the home section with a smooth transition
           $('#image').appendTo('.homeImage').animate({
-            top: 5
+            top: 1
           }, 1000); // You can adjust the duration (in milliseconds) for a faster or slower transition
         }
       }
