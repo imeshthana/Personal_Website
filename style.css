@@ -79,7 +79,7 @@ header .user .post{
 }
 
 header .navbar{
-    width: 100%;
+    width: 80%;
 }
 
 header .navbar ul{
@@ -90,10 +90,10 @@ header .navbar ul{
 header .navbar ul li a{
     display: block;
     padding: 1rem;
-    margin: 1.5rem 0;
+    margin: 1rem 0;
     background:#333 ;
     color: #fff;
-    font-size: 2rem;
+    font-size: 1.75rem;
     border-radius: 5rem;
 }
 
@@ -477,6 +477,65 @@ section{
 .projects .heading{
     margin-top: 1rem;
 }
+
+
+
+
+
+.skill-images {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.skill-image {
+    margin: 10px;
+}
+
+.skill-image img {
+    width:75px;
+    height: 75px; 
+    border-radius: 10px; 
+    background-color: #fff; 
+    padding: 5px; 
+}
+
+.skillcard{
+    flex: 0 0 auto;
+    padding: 20px;
+    width: fit-content;
+    height: auto;
+    display: flex;
+    margin: 0 2.5rem 2rem 2.5rem;
+    border: 2px solid var(--green);
+    border-radius: 2.5rem;
+    background-image: url("https://www.transparenttextures.com/patterns/inspiration-geometry.png");
+    background-color: #222;
+}
+
+.skill-row{
+    display: flex;
+    flex: 1 1;
+    /* flex-direction: column; */
+    align-items: left;
+}
+  
+
+.skillname {
+    flex: 1 1;
+    max-width: 10rem;
+    margin-right: 20px;
+    margin-top: 40px;
+}
+
+.skillname h2 {
+    margin: 0;
+    font-size: 20px;
+    font-weight: bold;
+    color: var(--green);
+}
+
+
 
 
 
