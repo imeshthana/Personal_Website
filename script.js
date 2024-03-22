@@ -47,7 +47,7 @@ $(document).ready(function(){
       var scrollPosition = $(window).scrollTop();
   
       // Check if the scroll position is greater than the initial position of the image
-      if (scrollPosition > initialImagePosition +5) {
+      if (scrollPosition > initialImagePosition) {
         // Check if the image is still in the home section
         if ($('#image').parent().is('.homeImage')) {
           // Move the image to the header with a smooth transition
