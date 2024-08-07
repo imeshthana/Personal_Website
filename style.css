@@ -37,7 +37,7 @@ html::-webkit-scrollbar-thumb{
 
 body{
     background:#111;
-    padding-left: 25%;
+    padding-top: 2.5%;
     display:flex;
 }
 
@@ -47,29 +47,39 @@ body{
 
 header{
     position:fixed;
-    top:0; left:0;
+    top:0; left:0; right:0;
     z-index:1000;
-    height: 100%;
-    width:25%;
+    height: 12.5%;
+    width:100%;
     background: #1a1a1a;
+    /* display:flex; */
+    /* align-items:center;
+    justify-content:center; */
+    flex-flow:row;
+    display: flex;
+    /* text-align: center; */
+}
+
+header .user{
     display:flex;
-    align-items:center;
-    justify-content:center;
-    flex-flow:column;
-    text-align: center;
+    flex: 1 1 50rem;
+    align-items: center;
+    padding: 1rem;
 }
 
 header .user img{
-    height:17rem;
-    width:17rem;
+    margin-top:1rem;
+    margin-left: 2rem;
+    height:5rem;
+    width:5rem;
     border-radius: 50%;
     object-fit: cover;
     margin-bottom: 1rem;
-    border:0.5rem solid var(--green);
 }
 
-header .user .name{
-    font-size: 3.5rem;
+header .user .headerName{
+    font-size: 3rem;
+    margin-left: 2rem;
     color: var(--green);
 }
 
@@ -79,18 +89,22 @@ header .user .post{
 }
 
 header .navbar{
-    width: 80%;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
 }
 
 header .navbar ul{
     list-style:none;
+    display:flex;
     padding:1rem 3rem;
 }
 
 header .navbar ul li a{
     display: block;
-    padding: 1rem;
-    margin: 1rem 0;
+    padding: 1rem 2rem;
+    margin: 0.5rem 1rem 1rem 1rem;
     background:#333 ;
     color: #fff;
     font-size: 1.75rem;
@@ -100,6 +114,14 @@ header .navbar ul li a{
 header .navbar ul li a:hover{
     background:var(--green) ;
     color: #111;
+}
+
+header .urls{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1 1 20rem;
+    padding: 1rem;
 }
 
 header .urls a{
@@ -126,9 +148,19 @@ header .urls i {
 .home{
     display: flex;
     justify-content:center;
-    flex-flow: column;
-    padding: 0 5rem 0 10rem;
+    flex-flow: row;
+    padding: 0 10rem 0 5rem;
     background-image: url("https://www.transparenttextures.com/patterns/inspiration-geometry.png");
+}
+
+.homeDescription{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: left;
+    padding: 1rem;
+    padding-left: 3rem;
+    width: 60%;
 }
 
 .home h3{
@@ -136,16 +168,23 @@ header .urls i {
     color:#fff;
 }
 .home h1{
-    font-size: 5rem;
+    font-size: 3.5rem;
+    color:#fff;
+}
+
+.home h2{
+    font-size: 3.5rem;
     color:#fff;
 }
 
 .home img{
-    height:30rem;
-    width:30rem;
+    height:35rem;
+    width:35rem;
     border-radius: 50%;
     object-fit: cover;
     margin-bottom: 1rem;
+        border:0.5rem solid var(--green);
+
 }
 
 .home .homeImage{
@@ -157,6 +196,7 @@ section{
     min-height: 100vh;
     width: 100%;
     padding: 1rem;
+    padding-top: 7rem;
 }
 
 
@@ -166,7 +206,13 @@ section{
     padding: 1rem 0;
 }
 .home span{
-    color: var(--green);
+    color: var(--green);  
+}
+
+.home h2 span{
+    color: white;
+    font-size: 4rem;
+
 }
 
 .btn{
@@ -207,15 +253,16 @@ section{
 
 .about .row{
     display:flex;
+    flex-direction: row;
     align-items: center;
-    justify-content: center;
-    flex-wrap:wrap;
+    justify-content: center; 
+    /* flex-wrap:wrap;  */
     padding: 1rem 0;
 }
 .about .row .info{
-    flex: 1 1 48rem;
+    flex: 1 1 50%;
     padding: 2rem 1rem;
-    padding-left: 6rem;
+    padding-left: 10rem;
 }
 
 .about .row .info h3{
@@ -228,27 +275,68 @@ section{
     color:#eee;
     padding: 0 1rem;
 }
+
+.row1{
+    display: flex;
+    margin-bottom: 3rem;
+}
+
+.row2{
+    display: flex;
+}
+
+.box1{
+    margin-right: 5rem;
+}
+
+.box3{
+    margin-right: 5rem;
+}
+
 .about .row .counter{
-    flex: 1 1 48rem;
+    flex: 1 1;
+    width: 100%;
     display:flex;
     justify-content: center;
     flex-wrap:wrap;
+    margin-bottom: 2rem;
+    margin-left: 5%;
+    margin-right: 5%;
 }
+
+
 .about .row .counter .box{
-    width:20rem;
+    flex: 1 1 80%; 
     background: #222;
     text-align: center;
-    padding: 2rem;
-    margin: 2rem ;
+    padding: 2rem; 
+    margin-right: 1rem; 
 }
-.about .row .counter .box span{
+
+.about .row .counter .box1{
+    flex: 1 1 80%; 
+    background: #222;
+    text-align: center;
+    padding: 2rem; 
+    margin-left: 1rem; 
+}
+
+.about .row .counter span{
     font-size: 4rem;
     color:var(--green);
 }
-.about .row .counter .box h3{
+.about .row .counter h3{
     font-size: 2rem;
     color:#fff;
 }
+
+.count {
+    font-size: 2em;
+    font-weight: bold;
+    color: #fff;
+}
+
+
 
 
 
@@ -266,7 +354,7 @@ section{
 }
 
 .education .box-container .box{
-    width:27rem;
+    width:40rem;
     margin: 4rem 1rem;
     padding-left: 4rem;
     border-left: 1rem solid #fff;
@@ -312,20 +400,21 @@ section{
 
 .contact .row{
     display:flex;
-    align-items: center;
+    /* align-items: center; */
     justify-content: center;
-    flex-wrap: wrap;
+    /* flex-wrap: wrap; */
 }
 .contact .row .content{
-    flex:1 1 30rem;
-    padding: 4rem;
-    padding-bottom: 5rem;
+    flex:1 1 50%;
+    padding: 2rem;
+    padding-left: 10rem;
+    /* padding-bottom: 5rem; */
 }
 .contact .row form{
-    flex:  1 1 45rem;
-    padding: 2rem;
+    flex:  1 2 50%;
+    padding-right: 5rem;
     margin: 2rem;
-    margin-top: 3rem;
+    /* margin-top: 3rem; */
 }
 .contact .row form .box{
     padding:1.5rem;
@@ -369,11 +458,11 @@ section{
 
 
 
-/* .projects{
-    width: 105rem;
+.projects{
+    margin-right: 5%;
 }
 
-.projects .slider-container{
+/* .projects .slider-container{
     width: 100%;
     height: 100%;
     display: flex;
@@ -543,13 +632,13 @@ section{
 .testi {
     position:absolute;
     display: flex;
-    max-width: 70%;
-    width: 100%;
+    width: 90%;
     overflow: scroll;
     overflow-y: hidden;
     align-items: center;
     justify-content: center; 
-    padding-left: 5%;
+    margin-left: 5%;
+    margin-right: 5%;
     padding-right: 5%;
 }
 
@@ -582,7 +671,7 @@ section{
 
 
 .card{
-    width: 30rem;
+    max-width: 40%;
     height: auto;
     display: flex;
     flex-direction: column;
@@ -624,7 +713,51 @@ section{
 
 
 
+  footer{
+    bottom:0; left:0; right:0;
+    z-index:1000;
+    height: 10rem;
+    width:100%;
+    margin-top: 5rem;
+    background: #1a1a1a;
+    /* display:flex; */
+    align-items:center;
+    justify-content:center;
+    flex-flow:row;
+    display: flex;
+    /* text-align: center; */
+}
 
+footer .user{
+    /* display:flex; */
+    flex: 1 1 30%;
+    align-items: center;
+    justify-content:center;
+    padding-left: 10rem;
+}
+
+footer .user p{
+    font-size: 2rem;
+    margin-left: 2rem;
+    color: var(--green);
+}
+
+footer .urls{
+    display:flex;
+    justify-content: end;
+    flex: 1 1 10rem;
+    margin-right: 10rem;
+    padding: 1rem;
+}
+
+footer .urls a{
+    color: #fff;
+}
+
+footer .urls i {
+    font-size: 3rem;
+    padding: 0 1rem 0 1rem;
+}
 
 
 

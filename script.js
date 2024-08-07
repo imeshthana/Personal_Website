@@ -53,16 +53,20 @@ $(document).ready(function(){
           // Move the image to the header with a smooth transition
           $('#image').appendTo('.headerImage').animate({
             top: 1
-          }, 1000); // You can adjust the duration (in milliseconds) for a faster or slower transition
+          }, 5000); // You can adjust the duration (in milliseconds) for a faster or slower transition
         }
+
+       
+
       } else {
         // Check if the image is in the header
         if ($('#image').parent().is('.headerImage')) {
           // Move the image back to the home section with a smooth transition
           $('#image').appendTo('.homeImage').animate({
             top: 1
-          }, 1000); // You can adjust the duration (in milliseconds) for a faster or slower transition
+          }, 5000); // You can adjust the duration (in milliseconds) for a faster or slower transition
         }
+
       }
     }); 
   });
