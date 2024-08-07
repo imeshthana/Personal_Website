@@ -1,12 +1,10 @@
 $(document).ready(function(){
-
     $('#menu').click(function(){
       $(this).toggleClass('fa-times');
       $('header').toggleClass('toggle');
     });
   
     $(window).on('scroll load',function(){
-  
       $('#menu').removeClass('fa-times');
       $('header').removeClass('toggle');
   
@@ -15,10 +13,7 @@ $(document).ready(function(){
       }else{
         $('.top').hide();
       }
-  
     });
-  
-    // smooth scrolling 
   
     $('a[href*="#"]').on('click',function(e){
       e.preventDefault();
@@ -28,24 +23,17 @@ $(document).ready(function(){
         500, 
         'linear'
       );
-
     });
-  
   });
 
 
-
   $(document).ready(function () {
-
     // Save the initial position of the image
     var initialImagePosition = $('#image').offset().top;
-  
     // Handle scroll event
     $(window).on('scroll load', function () {
-  
       // Get the current scroll position
       var scrollPosition = $(window).scrollTop();
-  
       // Check if the scroll position is greater than the initial position of the image
       if (scrollPosition > initialImagePosition) {
         // Check if the image is still in the home section
@@ -55,9 +43,6 @@ $(document).ready(function(){
             top: 1
           }, 5000); // You can adjust the duration (in milliseconds) for a faster or slower transition
         }
-
-       
-
       } else {
         // Check if the image is in the header
         if ($('#image').parent().is('.headerImage')) {
@@ -66,7 +51,6 @@ $(document).ready(function(){
             top: 1
           }, 5000); // You can adjust the duration (in milliseconds) for a faster or slower transition
         }
-
       }
     }); 
   });
@@ -101,5 +85,40 @@ $(document).ready(function(){
   });
 });
 
-
   
+// const counters = document.querySelectorAll('.counter span');
+// const container = document.querySelector('.about');
+
+// let activated = false;
+
+// window.addEventListener('scroll', () => {
+//   const containerTop = container.offsetTop;
+//   const containerHeight = container.offsetHeight;
+//   const scrollPosition = pageYOffset;
+
+//   if (scrollPosition > containerTop - containerHeight - 200 && activated === false) {
+//     counters.forEach(counter => {
+//       counter.innerText = 0;
+//       let count = 0;
+//       function updateCount() {
+//         const target = parseInt(counter.getAttribute('data-count'));
+//         if (count < target) {
+//           count += 1;
+//           counter.innerText = count;
+//           setTimeout(updateCount, 10);
+//         } else {
+//           counter.innerText = target;
+//         }
+//       }
+//       updateCount();
+//     });
+//     activated = true;
+//   } else if (scrollPosition < containerTop - containerHeight - 500 || scrollPosition === 0) {
+//     if (activated === true) {
+//       counters.forEach(counter => {
+//         counter.innerText = 0;
+//       });
+//       activated = false;
+//     }
+//   }
+// });
