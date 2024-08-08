@@ -62,7 +62,7 @@ header{
 
 header .user{
     display:flex;
-    flex: 1 1 50rem;
+    flex: 1 1 100rem;
     align-items: center;
     padding: 1rem;
 }
@@ -92,7 +92,7 @@ header .navbar{
     display:flex;
     justify-content: center;
     align-items: center;
-    width: 100%;
+    width: 60%;
 }
 
 header .navbar ul{
@@ -129,7 +129,7 @@ header .urls a{
 }
 
 header .urls i {
-    font-size: 3rem;
+    font-size: 2rem;
     padding: 0 1rem 0 1rem;
 }
 
@@ -144,6 +144,94 @@ header .urls i {
     display: none;
     z-index: 1000;
 }
+
+/* Media Queries */
+@media screen and (max-width: 1200px) {
+    header .urls {
+        display: none;
+    }
+    
+    header .user {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    header .navbar ul {
+        display: none;
+    }
+
+    header .user {
+        width: 100%;
+    }
+
+    html {
+        font-size: 45%;
+        overflow-x: hidden;
+    }
+
+    .home {
+        flex-direction: column;
+        padding: 0 2rem;
+    }
+
+
+    .homeDescription {
+        width: 100%;
+        padding-left: 0;
+        text-align: center;
+        align-items: center;
+    }
+
+    .home h1, .home h2, .home h3 {
+        font-size: 2.5rem;
+    }
+
+    .home img {
+        height: 25rem;
+        width: 25rem;
+    }
+
+    .btn {
+        font-size: 1.6rem;
+        padding: .5rem 2rem;
+    }
+
+
+}
+
+@media screen and (max-width: 600px) {
+    .home{
+        display: flex;
+        justify-content:center;
+        flex-direction: column;
+        flex-flow: column;
+        padding: 0 10rem 0 5rem;
+        background-image: url("https://www.transparenttextures.com/patterns/inspiration-geometry.png");
+    }
+
+    .homeDescription {
+        width: 100%;
+        padding: 0;
+    }
+
+    .home h1, .home h2, .home h3 {
+        font-size: 2rem;
+    }
+
+    .home img {
+        height: 20rem;
+        width: 20rem;
+    }
+
+    .btn {
+        font-size: 1.4rem;
+        padding: .5rem 1.5rem;
+    }
+}
+
+
+
 
 .home{
     display: flex;
@@ -568,7 +656,7 @@ section{
 
 
 .projects{
-    height: 120vh;
+    height: 130vh;
     width: 100%;
     background-color: transparent;
 }
@@ -686,8 +774,8 @@ section{
 
 
 .card{
-    max-width: 40%;
-    height: auto;
+    max-width: 50%;
+    max-height: 50%;
     display: flex;
     flex-direction: column;
     margin: 0 2.5rem 2rem 2.5rem;
@@ -697,41 +785,10 @@ section{
     background-color: #222;
 }
 
-/* .nav-btn {
-    height: 40px;
-    width: 40px;
-    border-radius: 50%;
-    transform: translateY(30px);
-    background-color:transparent;
-    transition: 0.2s;
-  }
-  .nav-btn:hover {
-    color: var(--green);
-  }
-  .nav-btn::after,
-  .nav-btn::before {
-    font-size: 20px;
-    color: white;
-  }
-
-  .nav-btn::after:hover,
-  .nav-btn::before:hover {
-    font-size: 20px;
-    color: var(--green);
-  } */
-
-
-
-
-
-
-
-
-
   footer{
     bottom:0; left:0; right:0;
     z-index:1000;
-    height: 10rem;
+    height: 8rem;
     width:100%;
     margin-top: 5rem;
     background: #1a1a1a;
@@ -752,7 +809,7 @@ footer .user{
 }
 
 footer .user p{
-    font-size: 2rem;
+    font-size: 1.5rem;
     margin-left: 2rem;
     color: var(--green);
 }
@@ -766,11 +823,16 @@ footer .urls{
 }
 
 footer .urls a{
-    color: #fff;
+    color: #ffffff7c;
+}
+
+footer .urls a:hover{
+    color: #ffffff;
 }
 
 footer .urls i {
-    font-size: 3rem;
+
+    font-size: 2rem;
     padding: 0 1rem 0 1rem;
 }
 
